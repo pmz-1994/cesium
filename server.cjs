@@ -192,6 +192,7 @@
     argv.public ? undefined : "localhost",
     function () {
       if (argv.public) {
+        // console.log(server.address());
         console.log(
           "Cesium development server running publicly.  Connect to http://localhost:%d/",
           server.address().port

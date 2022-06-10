@@ -5,6 +5,11 @@
       <sourceFolder url="file://$MODULE_DIR$/Specs" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/Build" />
       <excludeFolder url="file://$MODULE_DIR$/Instrumented" />
+      <excludeFolder url="file://$MODULE_DIR$/Apps/MyCesiumDemo/terra_b3dms" />
+      <excludeFolder url="file://$MODULE_DIR$/Apps/MyCesiumDemo/bim_b3dms" />
+      <excludeFolder url="file://$MODULE_DIR$/Apps/MyCesiumDemo/bim0_tiles" />
+      <excludeFolder url="file://$MODULE_DIR$/Apps/MyCesiumDemo/bim_tiles" />
+      <excludeFolder url="file://$MODULE_DIR$/Apps/MyCesiumDemo/bim1_tiles" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
