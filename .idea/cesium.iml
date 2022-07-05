@@ -10,6 +10,8 @@
       <excludeFolder url="file://$MODULE_DIR$/Apps/MyCesiumDemo/bim0_tiles" />
       <excludeFolder url="file://$MODULE_DIR$/Apps/MyCesiumDemo/bim_tiles" />
       <excludeFolder url="file://$MODULE_DIR$/Apps/MyCesiumDemo/bim1_tiles" />
+      <excludeFolder url="file://$MODULE_DIR$/Apps/MyCesiumDemo/nanchong_tiles" />
+      <excludeFolder url="file://$MODULE_DIR$/Apps/MyCesiumDemo/nanchong1_tiles" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

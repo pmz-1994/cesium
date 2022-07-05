@@ -10,7 +10,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
     />
-    <title>图乘科技</title>
+    <title>中交四航局</title>
     <link rel="shortcut icon" href="logo-blue.ico" type="image/x-icon" />
     <script src="../../Build/Cesium/Cesium.js"></script>
     <style>
@@ -32,6 +32,7 @@
         left: 0;
         padding: 5px;
         background-color: rgba(42, 42, 42, 0.4);
+        display: none;
       }
 
       #setPosition input {
@@ -51,8 +52,8 @@
         position: absolute;
         top: 0;
         left: 0;
+        padding: 5px;
         background-color: rgba(42, 42, 42, 0.4);
-        display: none;
       }
 
       .demoText {
@@ -130,12 +131,19 @@
         <input type="text" size="5" data-bind="value: RotateZ" />
       </div>
 
-      <input type="button" value="隐藏建筑模型" onclick="changeVisible()" />
+      <input
+        type="button"
+        value="调整建筑模型可见性"
+        onclick="changeVisible()"
+      />
+      <br />
       <input type="button" value="隐藏工具框" onclick="changeToolbar()" />
+      <input type="button" value="返回主页面" onclick="backToDashBoard()" />
     </div>
     <div id="showButton">
       <input type="button" value="显示工具框" onclick="showToolbar()" />
+      <input type="button" value="返回主页面" onclick="backToDashBoard()" />
     </div>
-    <script src="index.js"></script>
+    <script src="nanchong.js"></script>
   </body>
 </html>
