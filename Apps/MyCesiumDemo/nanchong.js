@@ -24,28 +24,6 @@ viewer.scene.debugShowFramesPerSecond = false;
 viewer.scene.globe.depthTestAgainstTerrain = false;
 // 隐藏 Cesium Logo
 viewer.cesiumWidget.creditContainer.style.display = "none";
-// viewer.scene.globe.show = false;
-
-// entity 的使用
-// const entity =viewer.entities.add({
-//   position: Cesium.Cartesian3.fromDegrees(116.39, 39.91, 400),
-//   point: {
-//     pixelSize: 100,
-//     color: new Cesium.Color(0, 1, 0, 1)
-//   }
-// });
-// viewer.trackedEntity = entity;
-
-// 设置相机视角
-// viewer.scene.camera.setView({
-//   destination: Cesium.Cartesian3.fromDegrees(116.39, 39.9, 1500)
-// })
-
-const tileset0 = viewer.scene.primitives.add(
-  new Cesium.Cesium3DTileset({
-    url: "terra_b3dms/tileset.json",
-  })
-);
 
 const tileset = viewer.scene.primitives.add(
   new Cesium.Cesium3DTileset({
@@ -53,6 +31,14 @@ const tileset = viewer.scene.primitives.add(
     url: "nanchong1_tiles/tileset.json",
   })
 );
+
+// 操作行为
+viewer.scene.screenSpaceCameraController.enableTilt = false;
+viewer.scene.screenSpaceCameraController.enableRotate = false;
+
+viewer.scene.screenSpaceCameraController.lookEventTypes = [
+  Cesium.CameraEventType.LEFT_DRAG,
+];
 
 let params = {
   tx: 106.132027, // 模型中心x轴坐标
@@ -275,7 +261,6 @@ viewer.screenSpaceEventHandler.setInputAction(function onMouseWheel(e) {
 
 (async () => {
   try {
-    await tileset0.readyPromise;
     await tileset.readyPromise;
     await viewer.zoomTo(
       tileset,
@@ -287,22 +272,13 @@ viewer.screenSpaceEventHandler.setInputAction(function onMouseWheel(e) {
     );
 
     // Apply the default style if it exists
-    var extras = tileset.asset.extras;
+    let extras = tileset.asset.extras;
     if (
       Cesium.defined(extras) &&
       Cesium.defined(extras.ion) &&
       Cesium.defined(extras.ion.defaultStyle)
     ) {
       tileset.style = new Cesium.Cesium3DTileStyle(extras.ion.defaultStyle);
-    }
-
-    var extras0 = tileset0.asset.extras;
-    if (
-      Cesium.defined(extras0) &&
-      Cesium.defined(extras0.ion) &&
-      Cesium.defined(extras0.ion.defaultStyle)
-    ) {
-      tileset0.style = new Cesium.Cesium3DTileStyle(extras0.ion.defaultStyle);
     }
   } catch (error) {
     console.log(error);
